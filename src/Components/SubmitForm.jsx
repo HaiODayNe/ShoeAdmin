@@ -48,7 +48,7 @@ const SubmitForm = () => {
       alert("Hãy điền đủ các thông tin sản phẩm!");
       return;
     }
-
+    const [a, seta] = useState("");
     try {
       if (id) {
         axios
