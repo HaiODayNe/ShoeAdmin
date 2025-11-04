@@ -21,6 +21,9 @@ import AuthRecoveryPW from "./Components/AuthRecoveryPW";
 import AuthRegister from "./Components/AuthRegister";
 import SubmitForm from "./Components/SubmitForm";
 import ListProducts from "./Components/ListProduct";
+import CategoryCreate from "./Components/CategoryCreate";
+import WarehouseCreate from "./Components/WarehouseCreate";
+import BrandCreate from "./Components/BrandCreate";
 class App extends Component {
   render() {
     return (
@@ -45,9 +48,12 @@ class App extends Component {
           <Route path="/authlogout" element={<AuthLogout />} />
           <Route path="/authrecoverpw" element={<AuthRecoveryPW />} />
           <Route path="/authregister" element={<AuthRegister />} />
-           <Route path="/submitform" element={<SubmitForm />} />
-           <Route path="/submitform/:id" element={<SubmitForm />} />
-           <Route path="/listproducts" element={<ListProducts />} />
+          <Route path="/submitform" element={<SubmitForm />} />
+          <Route path="/submitform/:id" element={<SubmitForm />} />
+          <Route path="/listproducts" element={<ListProducts />} />
+          <Route path="/categoryCreate" element={<CategoryCreate />} />
+          <Route path="/brandCreate" element={<BrandCreate />} />
+          <Route path="/warehouseCreate" element={<WarehouseCreate />} />
         </Routes>
       </Router>
     );

@@ -8,15 +8,13 @@ const ListProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
-      .get("https://684e8519f0c9c9848d285a09.mockapi.io/Shoe")
+      .get("http://localhost:8080/api/product/admin")
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   }, [products]);
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(
-        `https://684e8519f0c9c9848d285a09.mockapi.io/Shoe/${id}`
-      );
+      await axios.delete(`http://localhost:8080/api/product/admin/${id}`);
       setProducts((prev) => prev.filter((products) => products.id !== id));
     } catch (err) {
       console.log(err);

@@ -21,7 +21,7 @@ const SubmitForm = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`https://684e8519f0c9c9848d285a09.mockapi.io/Shoe/${id}`)
+        .get(`http://localhost:8080/api/product/get/${id}`)
         .then((res) => setProducts(res.data))
         .catch((err) => console.log(err));
     }
@@ -48,21 +48,15 @@ const SubmitForm = () => {
       alert("Hãy điền đủ các thông tin sản phẩm!");
       return;
     }
-    const [a, seta] = useState("");
+
     try {
       if (id) {
         axios
-          .put(
-            `https://684e8519f0c9c9848d285a09.mockapi.io/Shoe/${id}`,
-            products
-          )
+          .put(`http://localhost:8080/api/product/update/${id}`, products)
           .then(() => alert("Câp nhật sản phẩm thành công!"))
           .catch(() => alert("Cập nhật sản phẩm không thành công!"));
       } else {
-        await axios.post(
-          "https://684e8519f0c9c9848d285a09.mockapi.io/Shoe",
-          products
-        );
+        await axios.post("http://localhost:8080/api/product/add", products);
         alert("Thêm sản phẩm thành công!");
       }
 
@@ -88,7 +82,7 @@ const SubmitForm = () => {
   const [category, setCategory] = useState([]);
   useEffect(() => {
     axios
-      .get("https://684e8519f0c9c9848d285a09.mockapi.io/CATALOGUE")
+      .get("http://localhost:8080/api/category/all")
       .then((res) => setCategory(res.data))
       .catch((err) => console.log(err));
   }, []);

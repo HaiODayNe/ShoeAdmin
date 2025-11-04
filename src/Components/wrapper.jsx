@@ -6,18 +6,7 @@ const Wrapper = () => {
         <Link to="/" className="logo">
           <span className="logo-light">
             <span className="logo-lg">
-              <img src="assets/images/logo.png" alt="logo" />
-            </span>
-            <span className="logo-sm">
-              <img src="assets/images/logo.png" alt="small logo" />
-            </span>
-          </span>
-          <span className="logo-dark">
-            <span className="logo-lg">
-              <img src="assets/images/logo.png" alt="dark logo" />
-            </span>
-            <span className="logo-sm">
-              <img src="assets/images/logo.png" alt="small logo" />
+              {/* <img src="assets/images/logo.png" alt="logo" /> */}
             </span>
           </span>
         </Link>
@@ -64,12 +53,37 @@ const Wrapper = () => {
                 <span className="menu-text"> Email </span>
               </Link>
             </li>
+
+            <li className="side-nav-item">
+              <Link to="/categoryCreate" className="side-nav-link">
+                <span className="menu-icon">
+                  <i className="ti ti-list-details" />
+                </span>
+                <span className="menu-text">Category Upload</span>
+              </Link>
+            </li>
+            <li className="side-nav-item">
+              <Link to="/brandCreate" className="side-nav-link">
+                <span className="menu-icon">
+                  <i className="ti ti-list-details" />
+                </span>
+                <span className="menu-text">Brand Upload</span>
+              </Link>
+            </li>
+            <li className="side-nav-item">
+              <Link to="/warehouseCreate" className="side-nav-link">
+                <span className="menu-icon">
+                  <i className="ti ti-list-details" />
+                </span>
+                <span className="menu-text">Warehouse Upload</span>
+              </Link>
+            </li>
             <li className="side-nav-item">
               <Link to="/submitform" className="side-nav-link">
                 <span className="menu-icon">
                   <i className="ti ti-list-details" />
                 </span>
-                <span className="menu-text">File Uploads</span>
+                <span className="menu-text">Product Uploads</span>
               </Link>
             </li>
             <li className="side-nav-item">
